@@ -16,7 +16,7 @@
     </Design.DataContext>
 
     <StackPanel VerticalAlignment="Center">
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center">New Book</Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Click="OpenEditor">New Book</Button>
         <Button HorizontalAlignment="Center" VerticalAlignment="Center">Load Book</Button>
     </StackPanel>
 
