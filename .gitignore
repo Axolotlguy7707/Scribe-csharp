@@ -1,0 +1,55 @@
+# === JetBrains Rider / IDE files ===
+.idea/
+*.sln.iml
+*.DotSettings.user
+
+# Rider workspace backups
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ReSharper / JetBrains caches
+_ReSharper*/
+*.dotCover
+
+# === .NET / C# build outputs ===
+bin/
+obj/
+Debug/
+Release/
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.cache
+*.log
+
+# NuGet packages
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# === Avalonia-specific files ===
+# Generated XAML code-behind
+*.xaml.g.cs
+*.g.i.cs
+
+# Avalonia Designer caches (if any)
+*.AvaloniaDesignerCache
+
+# === Logs ===
+*.log
+
+# === OS-specific ===
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~ 
