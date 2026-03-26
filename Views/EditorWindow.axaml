@@ -5,5 +5,48 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Scribe.Views.EditorWindow"
         Title="EditorWindow">
-    <Button>Kill me</Button>
+        
+
+        <Grid>
+                <!-- Define two rows: Menu at top, content fills the rest -->
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>  <!-- Menu row -->
+                        <RowDefinition Height="*"/>     <!-- Content row -->
+                </Grid.RowDefinitions>
+
+                <!-- Menu goes in the first row -->
+                <Menu Grid.Row="0">
+                        <MenuItem Header="File">
+                                <MenuItem Header="New Book"/>
+                                <MenuItem Header="Open Book"/>
+                                <MenuItem Header="Save"/>
+                                <MenuItem Header="Save As"/>
+                                <MenuItem Header="Export">
+                                        <MenuItem Header="PDF"/>
+                                        <MenuItem Header="EPUB"/>
+                                        <MenuItem Header="TXT"/>
+                                </MenuItem>
+                        </MenuItem>
+                        <MenuItem Header="Edit">
+                                <MenuItem Header="Undo"/>
+                                <MenuItem Header="Redo"/>
+                        </MenuItem>
+                        <MenuItem Header="_View">
+                                <MenuItem Header="Zoom In"/>
+                                <MenuItem Header="Zoom Out"/>
+                        </MenuItem>
+                        <MenuItem Header="_Window">
+                                <MenuItem Header="Minimize"/>
+                                <MenuItem Header="Maximize"/>
+                        </MenuItem>
+                </Menu>
+
+                <!-- Editor/content goes in the second row -->
+                <Grid Grid.Row="1" Background="White">
+                        <TextBlock Text="Editor Area"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="20"/>
+                </Grid>
+        </Grid>
 </Window>
