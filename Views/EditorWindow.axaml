@@ -2,12 +2,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Scribe.Views.EditorWindow"
-        Title="EditorWindow">
+        Title="Scribe - Book Editor">
+        
+        
         
 
         <Grid>
+                
                 <!-- Define two rows: Menu at top, content fills the rest -->
                 <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>  <!-- Menu row -->
@@ -43,10 +47,7 @@
 
                 <!-- Editor/content goes in the second row -->
                 <Grid Grid.Row="1" Background="White">
-                        <TextBlock Text="Editor Area"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="20"/>
+                        
                 </Grid>
         </Grid>
 </Window>
