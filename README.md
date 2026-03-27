@@ -1,6 +1,8 @@
 ﻿# Scribe
 A Free, Easy Way to write
 
+# DISCLAIMER: THIS PROJECT IS UNDER DEEP DEVELOPMENT, AND IS NOT PRODUCTION READY. THIS REPO IS PUBLIC TO FIND CONTRIBUTORS.
+
 Scribe is free and open source,
 meaning you can use it for any commercial
 purposes! Even if your book becomes a
