@@ -35,6 +35,10 @@
                 <MenuItem Header="Minimize"/>
                 <MenuItem Header="Maximize"/>
             </MenuItem>
+            <MenuItem Header="Chapters" x:Name="ChaptersMenu">
+                
+            </MenuItem>
+            
         </Menu>
 
         <!-- Editor fills the remaining space automatically -->

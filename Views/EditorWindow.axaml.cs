@@ -54,12 +54,16 @@ public partial class EditorWindow : Window
         var newChapter = new Chapter { Title = $"Chapter {Chapters.Count + 1}" };
         Chapters.Add(newChapter);
         LoadChapter(newChapter);
+        
+        PopulateChaptersMenu();
     }
 
     private void OnOpened(object? sender, EventArgs e)
     {
         Editor.Focus();
         Editor.TextArea.Focus();
+
+        PopulateChaptersMenu();
     }
     
     private void SaveToScribe(string filePath)
@@ -135,6 +139,8 @@ public partial class EditorWindow : Window
             LoadChapter(Chapters[0]);
 
         Directory.Delete(tempDir, true);
+        
+        
     }
     
     private async void Save_Click(object? sender, RoutedEventArgs e)
@@ -169,4 +175,36 @@ public partial class EditorWindow : Window
         if (result != null && result.Length > 0)
             LoadFromScribe(result[0]);
     }
+    
+    private void PopulateChaptersMenu()
+    {
+        var items = ChaptersMenu.Items; // This is an AvaloniaList<object>
+        items.Clear();
+
+        foreach (var chapter in Chapters)
+        {
+            var menuItem = new MenuItem
+            {
+                Header = chapter.Title,
+                Tag = chapter
+            };
+
+            menuItem.Click += ChapterMenuItem_Click;
+
+            items.Add(menuItem);
+        }
+    }
+
+    private void ChapterMenuItem_Click(object? sender, RoutedEventArgs e)
+    {
+        if (sender is MenuItem mi && mi.Tag is Chapter chapter)
+        {
+            SaveCurrentChapter();
+            LoadChapter(chapter);
+        }
+    }
+
+
+
+
 }
