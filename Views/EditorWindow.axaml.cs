@@ -88,7 +88,7 @@ public partial class EditorWindow : Window
         for (int i = 0; i < book.Chapters.Count; i++)
         {
             var chapter = book.Chapters[i];
-            chapter.FileName = $"chapter{i + 1}.md";
+            chapter.FileName = $"chapter{i + 1}.rtf";
 
             var chapterPath = Path.Combine(tempDir, "chapters", chapter.FileName);
             File.WriteAllText(chapterPath, chapter.Content);
