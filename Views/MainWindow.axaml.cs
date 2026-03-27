@@ -15,6 +15,6 @@ public partial class MainWindow : Window
         // Open new editor window and close this window
         var editor = new EditorWindow();
         editor.Show();
-        this.Hide();
+        this.Close();
     }
 }

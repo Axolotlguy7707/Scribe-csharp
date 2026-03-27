@@ -14,6 +14,13 @@ public partial class EditorWindow : Window
         InitializeComponent();
 
         this.Opened += OnOpened;
+        this.Closed += OnClosed;
+    }
+
+    private void OnClosed(object? sender, EventArgs e)
+    {
+        var mainWindow = new MainWindow();
+        mainWindow.Show();
     }
 
     private void OnOpened(object? sender, EventArgs e)

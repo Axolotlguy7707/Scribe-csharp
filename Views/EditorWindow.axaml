@@ -1,9 +1,9 @@
 ﻿<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
-        x:Class="Scribe.Views.EditorWindow"
-        Title="Scribe - Book Editor"
-        Width="800" Height="450">
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+         x:Class="Scribe.Views.EditorWindow"
+         Title="Scribe - Book Editor"
+         Width="800" Height="450">
 
     <!-- DockPanel automatically docks children; last child fills remaining space -->
     <DockPanel>
