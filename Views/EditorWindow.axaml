@@ -3,7 +3,9 @@
          xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
          x:Class="Scribe.Views.EditorWindow"
          Title="Scribe - Book Editor"
-         Width="800" Height="450">
+         Width="800" Height="450"
+         Icon="/Assets/icon.ico">
+    
 
     <!-- DockPanel automatically docks children; last child fills remaining space -->
     <DockPanel>
@@ -12,10 +14,9 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
                 <MenuItem Header="New Book"/>
-                <MenuItem Header="Open Book"/>
+                <MenuItem Header="Open Book" Click="Open_Click"/>
                 <MenuItem Header="New Chapter" Click="NewChapter_Click"/>
-                <MenuItem Header="Save"/>
-                <MenuItem Header="Save As"/>
+                <MenuItem Header="Save" Click="Save_Click"/>
                 <MenuItem Header="Export">
                     <MenuItem Header="PDF"/>
                     <MenuItem Header="EPUB"/>
@@ -41,9 +42,11 @@
                                  FontFamily="Cascadia Code, Consolas, Monospace"
                                  FontSize="16"
                                  WordWrap="True"
-                                 HorizontalScrollBarVisibility="Auto"
+                                 HorizontalScrollBarVisibility="Visible"
                                  VerticalScrollBarVisibility="Visible"
                                  IsReadOnly="False"
                                  IsEnabled="True"/>
+        
+        
     </DockPanel>
 </Window>
